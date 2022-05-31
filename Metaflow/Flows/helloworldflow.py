@@ -1,3 +1,20 @@
+# Metaflow rules:
+# 1. DAG (Directed acyclic graphs) may be represented as flows derived from FlowSpec class.
+# 2. A step in a flow implemented as method and denoted by @step decorator, must end in self.next() 
+# 3. First step must be start, last step must be end (end doesn't require self.next()
+# 4. Must link steps with self.next(next_step_name)
+# 5. One flow per python module. Instantiate flow class with if __name__ == '__main__'
+
+
+# CLI commands:
+# Validate without execution
+# ~ python helloworldflow.py 
+# Textual flow representation
+# ~ python helloworldflow.py show
+# Execute flow
+# ~ python helloworldflow.py run
+
+
 from metaflow import FlowSpec, step
 
 class HelloWorldFlow(FlowSpec):
