@@ -2,7 +2,7 @@
 # - special artifacts that may be passed into a run
 # - immutable class-level constructs
 # - available to all steps
-# 
+#
 # Metaflow parameters require an artifact and parameter name, which may be the same.
 # May be assigned explicit python types and default value.
 # If no default value and no value provided, given None.
